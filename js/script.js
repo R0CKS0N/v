@@ -19,7 +19,7 @@ recognition.onspeechend = function () {
 }
 
 recognition.onerror = function () {
-    instructions.text("Try Again")
+    instructions.text('Speech recognition error detected: ' + event.error)
 }
 
 recognition.onresult = function () {
@@ -28,8 +28,8 @@ recognition.onresult = function () {
     let transcript = event.results[current][0].transcript
 
     content += transcript
-
-    textbox.Val(content)
+    console.log(content);
+    textbox.text(content)
 }
 
 $("#start-btn").click(function (event) {
