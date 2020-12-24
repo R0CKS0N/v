@@ -47,7 +47,7 @@ const speak = () => {
             console.error('Error occured...');
         };
 
-        const id = voice_select.selectedIndex;
+
         const selectedVoice =
             voice_select.selectedOptions[0].getAttribute('data-name');
 
